@@ -1,0 +1,10 @@
+ba_year = ba_data['year'].value_counts()
+pds = ba_data['location'].value_counts()
+hourly = ba_data.groupby(['hour']).size()
+hourly.plot.bar(x= 'hour')
+
+# count by month and arrange by descending frequency
+monthly = ba_data.groupby(['month']).size()
+
+# use plot.bar to make the appropriate bar chart
+monthly.plot.bar(x= 'month' )
